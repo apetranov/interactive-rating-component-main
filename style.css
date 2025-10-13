@@ -52,8 +52,39 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 2%;
+  gap: 20%;
 }
 
 .result {
   display: none;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: start; /* Aligns with h1 and p */
+  align-items: center;
+  gap: 1rem; /* smaller, consistent spacing between numbers */
+}
+
+.numbers span {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(217, 12%, 63%);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.numbers span:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
+.attribution {
+  color: white;
 }
