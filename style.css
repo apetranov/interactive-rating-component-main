@@ -51,7 +51,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 2%;
+  border-radius: 5%;
   gap: 20%;
 }
 
@@ -87,4 +87,29 @@ body {
 
 .attribution {
   color: white;
+}
+
+.star {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(217, 12%, 63%);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 9999px; /* large enough value makes edges fully rounded */
+  background-color: hsl(25, 97%, 53%);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: white;
+  /* color: white; */
 }
