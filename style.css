@@ -116,6 +116,7 @@ button {
 
 button:hover {
   background-color: white;
+  cursor: pointer;
   /* color: white; */
 }
 span {
@@ -139,4 +140,9 @@ span:hover {
 span.active {
   background-color: white !important;
   color: black !important;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

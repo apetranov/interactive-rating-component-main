@@ -53,13 +53,44 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll("span");
+  const submitButton = document.querySelector("button");
+  const mainDiv = document.querySelector(".main-div");
 
+  // Disable submit initially
+  submitButton.disabled = true;
+
+  // Click on a number span
   buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
       // Remove 'active' from all buttons
       buttons.forEach((b) => b.classList.remove("active"));
       // Add 'active' to clicked button
       btn.classList.add("active");
+
+      // Enable submit
+      submitButton.disabled = false;
+
+      // Stop event from bubbling to document click
+      e.stopPropagation();
     });
+  });
+
+  // Click on submit button
+  submitButton.addEventListener("click", (e) => {
+    mainDiv.style.display = "none";
+    e.stopPropagation(); // Prevent resetting active on submit click
+  });
+
+  // Click anywhere else on the document
+  document.addEventListener("click", (e) => {
+    const clickedOutside =
+      !e.target.closest("span") && !e.target.closest("button");
+
+    if (clickedOutside) {
+      // Reset all number spans
+      buttons.forEach((b) => b.classList.remove("active"));
+      // Disable submit again
+      submitButton.disabled = true;
+    }
   });
 });
