@@ -85,6 +85,11 @@ body {
   color: white;
 }
 
+.numbers span:active {
+  background-color: white;
+  color: black;
+}
+
 .attribution {
   color: white;
 }
@@ -112,4 +117,26 @@ button {
 button:hover {
   background-color: white;
   /* color: white; */
+}
+span {
+  display: inline-block;
+  padding: 10px 20px;
+
+  cursor: pointer;
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(217, 12%, 63%);
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for all spans */
+span:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
+/* Active class for clicked span */
+span.active {
+  background-color: white !important;
+  color: black !important;
 }
