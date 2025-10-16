@@ -142,6 +142,7 @@ button {
   border-radius: 9999px; /* large enough value makes edges fully rounded */
   background-color: hsl(25, 97%, 53%);
   transition: background-color 0.3s, color 0.3s;
+  border: none;
 }
 
 button:hover {
