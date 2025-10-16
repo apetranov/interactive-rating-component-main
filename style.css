@@ -42,10 +42,14 @@ body {
   color: hsl(217, 12%, 63%);
 }
 
+.main-div p {
+  line-height: 1.5;
+}
+
 .main-square {
   background-color: hsl(213, 19%, 18%);
-  width: 30%;
-  height: 50%;
+  width: 25rem;
+  height: 22rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -55,8 +59,34 @@ body {
   gap: 20%;
 }
 
+.main-div,
+.result {
+  transition: opacity 0.4s ease;
+}
+
 .result {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.result h1 {
+  color: white;
+}
+
+.result > :last-child {
+  color: hsl(217, 12%, 63%);
+  line-height: 1.5;
+}
+
+.result :nth-child(2) {
+  color: hsl(25, 97%, 53%);
+  padding: 10px 20px;
+  border-radius: 9999px; /* large enough value makes edges fully rounded */
+  background-color: hsl(215, 11%, 21%);
 }
 
 .numbers {
@@ -145,4 +175,28 @@ span.active {
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.attribution {
+  text-align: center;
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 600px) {
+  .main-square {
+    width: 85vw;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
