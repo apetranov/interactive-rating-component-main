@@ -192,11 +192,27 @@ button:disabled {
     width: 85vw;
   }
 
-  h1 {
+  .main-div h1 {
     font-size: 2rem;
   }
 
   p {
+    font-size: 1rem;
+  }
+
+  .result {
+    gap: 0.1rem;
+  }
+
+  .result img {
+    width: 50%;
+  }
+
+  .result h1 {
+    font-size: 2rem;
+  }
+
+  .result :last-child {
     font-size: 1rem;
   }
 }
